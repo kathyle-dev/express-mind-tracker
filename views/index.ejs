@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mind Tracker</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="container">
+
+
+  <h2>What's on Your Mind?</h2>
+
+  <section class="btns">
+  <a href="/filter/Energized"><button type="button" class="category Energized">Energized</button></a>
+  <a href="/filter/Stressed"><button type="button" class="category Stressed">Stressed</button></a>
+  <a href="/filter/Annoyed"><button type="button" class="category Annoyed">Annoyed</button></a>
+  <a href="/filter/Lesson"><button type="button" class="category Lesson">Lesson</button></a>
+  <a href="/filter/Motivation"><button type="button" class="category Motivation">Motivation</button></a>
+</section>
+
+  <h3>THOUGHTS</h3>
+  <section class="smContainer">
+  <ul class="thoughts">
+  <% for(var i=0; i<thoughts.length; i++) {%>
+    <li class="thought">
+      <span><%= thoughts[i].title %></span>
+      <p><%=thoughts[i].category %></p>
+      <p><%= thoughts[i].msg %></p>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+</section>
+
+  <h2>Add a Thought</h2>
+
+  <form action="/thoughts" method="POST">
+    <input type="text" placeholder="TITLE" name="title">
+    <select class="category" name="category" id="category-select">
+      <option value="Energized">Energized</option>
+      <option value="Stressed">Stressed</option>
+      <option value="Annoyed">Annoyed</option>
+      <option value="Lesson">Lesson</option>
+      <option value="Motivation">Motivation</option>
+    </select>
+    <textarea name="msg" placeholder="Let it out here!"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+</section>
+  <script src="main.js"></script>
+
+</body>
+</html>

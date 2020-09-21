@@ -1,0 +1,91 @@
+*{
+  margin: none;
+  padding: none;
+}
+body{
+  background: url("https://image.freepik.com/free-vector/motivational-quote-pop-art-style-design-collection_187482-226.jpg") center repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  border: 5px solid gold;
+  color: white;
+}
+.smContainer{
+  display:flex;
+  flex-wrap: wrap;
+  border-top: 5px solid gold;
+  border-bottom: 5px solid gold;
+  width: 100%;
+}
+
+h2{
+  font-size: 30px;
+}
+button{
+  font-size: 1.1rem;
+  background-color: #ffd740;
+  border-radius: 8px;
+  padding: 0.3rem;
+  border: 3px solid black;
+}
+button:hover{
+border: 3px solid white;
+}
+#home{
+  margin: 1rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width:auto;
+}
+
+li{
+  max-width: 250px;
+  border: 5px solid white;
+  border-radius: 8px;
+  padding: 0.65rem;
+  list-style: none;
+  font-size: 1.2rem;
+}
+.thought span{
+  text-transform: uppercase;
+}
+.thought p{
+  text-transform: capitalize;
+}
+
+.fa{
+  text-align: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width:30%;
+}
+input, textarea, select{
+    font-size: 1.1rem;
+    border: 3px solid black;
+    border-radius: 8px;
+    outline: none;
+}
